@@ -1,0 +1,10 @@
+D:\.Net\Apriori_Check\Apriori_Check\bin\Debug\Apriori_Check.exe.config
+D:\.Net\Apriori_Check\Apriori_Check\bin\Debug\Apriori_Check.exe
+D:\.Net\Apriori_Check\Apriori_Check\bin\Debug\Apriori_Check.pdb
+D:\.Net\Apriori_Check\Apriori_Check\obj\Debug\Apriori_Check.csproj.AssemblyReference.cache
+D:\.Net\Apriori_Check\Apriori_Check\obj\Debug\Apriori_Check.Form1.resources
+D:\.Net\Apriori_Check\Apriori_Check\obj\Debug\Apriori_Check.Properties.Resources.resources
+D:\.Net\Apriori_Check\Apriori_Check\obj\Debug\Apriori_Check.csproj.GenerateResource.cache
+D:\.Net\Apriori_Check\Apriori_Check\obj\Debug\Apriori_Check.csproj.CoreCompileInputs.cache
+D:\.Net\Apriori_Check\Apriori_Check\obj\Debug\Apriori_Check.exe
+D:\.Net\Apriori_Check\Apriori_Check\obj\Debug\Apriori_Check.pdb
