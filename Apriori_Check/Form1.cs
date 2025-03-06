@@ -31,6 +31,12 @@ namespace Apriori_Check
         }
         private void LoadTransactions(string filePath)
         {
+            if (Path.GetExtension(filePath).ToLower() != ".svm")
+            {
+                MessageBox.Show("File không hợp lệ! Chỉ chấp nhận file .svm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             transactions.Clear();
             dataGridView1.Rows.Clear();
 
@@ -53,9 +59,16 @@ namespace Apriori_Check
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "SVM Files (*.svm)|*.svm|All Files (*.*)|*.*";
+                openFileDialog.Title = "Chọn file dữ liệu (.svm)";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    if (Path.GetExtension(openFileDialog.FileName).ToLower() != ".svm")
+                    {
+                        MessageBox.Show("Chỉ hỗ trợ file .svm! Vui lòng chọn lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     displayfile.Text = openFileDialog.FileName;
                     LoadTransactions(openFileDialog.FileName);
                 }
@@ -125,7 +138,6 @@ namespace Apriori_Check
                         }
                     }
                 }
-
                 currentItemsets = candidateCounts.Where(c => c.Value >= minSupport)
                                                  .ToDictionary(c => c.Key, c => c.Value);
 
@@ -136,18 +148,15 @@ namespace Apriori_Check
             }
             return frequentItemsets;
         }
-
         private static List<HashSet<string>> GenerateCandidates(List<HashSet<string>> prevItemsets, int k)
         {
             var candidates = new List<HashSet<string>>();
-
             for (int i = 0; i < prevItemsets.Count; i++)
             {
                 for (int j = i + 1; j < prevItemsets.Count; j++)
                 {
                     var unionSet = new HashSet<string>(prevItemsets[i]);
                     unionSet.UnionWith(prevItemsets[j]);
-
                     if (unionSet.Count == k && !candidates.Contains(unionSet))
                         candidates.Add(unionSet);
                 }

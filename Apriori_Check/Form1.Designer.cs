@@ -77,7 +77,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(670, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(714, 153);
             this.dataGridView1.TabIndex = 2;
             // 
             // tid
@@ -139,9 +139,9 @@
             // 
             this.listResult.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listResult.HideSelection = false;
-            this.listResult.Location = new System.Drawing.Point(124, 402);
+            this.listResult.Location = new System.Drawing.Point(124, 429);
             this.listResult.Name = "listResult";
-            this.listResult.Size = new System.Drawing.Size(670, 97);
+            this.listResult.Size = new System.Drawing.Size(714, 150);
             this.listResult.TabIndex = 6;
             this.listResult.UseCompatibleStateImageBehavior = false;
             // 
