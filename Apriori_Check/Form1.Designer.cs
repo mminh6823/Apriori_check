@@ -46,7 +46,7 @@
             // choosefile
             // 
             this.choosefile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.choosefile.Location = new System.Drawing.Point(430, 106);
+            this.choosefile.Location = new System.Drawing.Point(468, 167);
             this.choosefile.Name = "choosefile";
             this.choosefile.Size = new System.Drawing.Size(87, 31);
             this.choosefile.TabIndex = 0;
@@ -57,7 +57,7 @@
             // displayfile
             // 
             this.displayfile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.displayfile.Location = new System.Drawing.Point(124, 110);
+            this.displayfile.Location = new System.Drawing.Point(162, 171);
             this.displayfile.Name = "displayfile";
             this.displayfile.Size = new System.Drawing.Size(288, 22);
             this.displayfile.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tid,
             this.itemset});
-            this.dataGridView1.Location = new System.Drawing.Point(124, 257);
+            this.dataGridView1.Location = new System.Drawing.Point(162, 318);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -100,7 +100,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 84);
+            this.label1.Location = new System.Drawing.Point(164, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 3;
@@ -110,7 +110,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 152);
+            this.label2.Location = new System.Drawing.Point(164, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 16);
             this.label2.TabIndex = 4;
@@ -119,7 +119,7 @@
             // txtMinsup
             // 
             this.txtMinsup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMinsup.Location = new System.Drawing.Point(124, 178);
+            this.txtMinsup.Location = new System.Drawing.Point(162, 239);
             this.txtMinsup.Name = "txtMinsup";
             this.txtMinsup.Size = new System.Drawing.Size(288, 22);
             this.txtMinsup.TabIndex = 5;
@@ -127,7 +127,7 @@
             // btnAction
             // 
             this.btnAction.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAction.Location = new System.Drawing.Point(430, 174);
+            this.btnAction.Location = new System.Drawing.Point(468, 235);
             this.btnAction.Name = "btnAction";
             this.btnAction.Size = new System.Drawing.Size(87, 31);
             this.btnAction.TabIndex = 0;
@@ -139,7 +139,7 @@
             // 
             this.listResult.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listResult.HideSelection = false;
-            this.listResult.Location = new System.Drawing.Point(124, 429);
+            this.listResult.Location = new System.Drawing.Point(162, 490);
             this.listResult.Name = "listResult";
             this.listResult.Size = new System.Drawing.Size(714, 150);
             this.listResult.TabIndex = 6;
@@ -150,7 +150,7 @@
             this.lbtapphobien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbtapphobien.AutoSize = true;
             this.lbtapphobien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtapphobien.Location = new System.Drawing.Point(536, 112);
+            this.lbtapphobien.Location = new System.Drawing.Point(157, 673);
             this.lbtapphobien.Name = "lbtapphobien";
             this.lbtapphobien.Size = new System.Drawing.Size(258, 25);
             this.lbtapphobien.TabIndex = 7;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 609);
+            this.ClientSize = new System.Drawing.Size(985, 731);
             this.Controls.Add(this.lbtapphobien);
             this.Controls.Add(this.listResult);
             this.Controls.Add(this.txtMinsup);
@@ -171,7 +171,7 @@
             this.Controls.Add(this.btnAction);
             this.Controls.Add(this.choosefile);
             this.Name = "Form1";
-            this.Text = "Tìm tập phổ biến bảng thuật toán Apriori";
+            this.Text = "Tìm tập phổ biến bằng thuật toán Apriori";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

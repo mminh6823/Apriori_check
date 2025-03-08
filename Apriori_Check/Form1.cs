@@ -53,7 +53,6 @@ namespace Apriori_Check
                 }
             }
         }
-
         private void choosefile_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -79,10 +78,9 @@ namespace Apriori_Check
         {
             if (!double.TryParse(txtMinsup.Text, out double minSupport) || minSupport <= 0 || minSupport > 1)
             {
-                MessageBox.Show("Vui lòng nhập ngưỡng hỗ trợ hợp lệ (số thực từ 0 đến 1).");
+                MessageBox.Show("Vui lòng nhập ngưỡng hỗ trợ hợp lệ (số thực >0 và <=1).");
                 return;
             }
-
             var frequentItemsets = AprioriAlgorithm.Run(transactions.Values.ToList(), minSupport);
             listResult.Items.Clear();
 
@@ -110,14 +108,12 @@ namespace Apriori_Check
         {
             Dictionary<HashSet<string>, double> frequentItemsets = new Dictionary<HashSet<string>, double>(HashSet<string>.CreateSetComparer());
             int totalTransactions = transactions.Count;
-
             var itemCounts = transactions.SelectMany(t => t)
                                          .GroupBy(i => i)
                                          .ToDictionary(g => new HashSet<string> { g.Key }, g => (double)g.Count() / totalTransactions);
 
             var currentItemsets = itemCounts.Where(i => i.Value >= minSupport)
                                             .ToDictionary(i => i.Key, i => i.Value);
-
             frequentItemsets = new Dictionary<HashSet<string>, double>(currentItemsets);
 
             int k = 2;
@@ -140,10 +136,8 @@ namespace Apriori_Check
                 }
                 currentItemsets = candidateCounts.Where(c => c.Value >= minSupport)
                                                  .ToDictionary(c => c.Key, c => c.Value);
-
                 foreach (var item in currentItemsets)
                     frequentItemsets[item.Key] = item.Value;
-
                 k++;
             }
             return frequentItemsets;
